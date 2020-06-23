@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>TraceRoute</h3>
+<form action="{{ url_for('traceIP') }}" method="post">
+  <h4>Enter IP</h4> <input type="text" name="ip">
+  <button type="submit">Submit</button>
+</form>
+{% endblock %}
+
