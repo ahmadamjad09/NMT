@@ -7,7 +7,8 @@ class Ipgraph:
         for i in range(length - 1):
             G.add_edge(ips_list[i], ips_list[i + 1])
         nx.draw(G, with_labels=True)
-        plt.show()
+        #plt.show()
+        plt.savefig('/home/ahmad/NMT/app/static/images/Graph')
 
 
 

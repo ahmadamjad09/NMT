@@ -17,4 +17,4 @@ def traceIP():
            ip_list = trace.getIpList()
            print(ip_list)
            graph.set_Graph(ip_list)
-       return "Command Submit Successfully"
+       return render_template('graph.html',title='Graph')
