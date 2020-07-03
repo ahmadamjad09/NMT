@@ -9,6 +9,7 @@ class Ipgraph:
             G.add_edge(ips_list[i], ips_list[i + 1])
         nx.draw(G, with_labels=True)
         #plt.show()
+        #save file dynamically(independent to directory)
         dirname = os.path.dirname(__file__)
         filename = os.path.join(dirname, 'app/static/images/Graph')
         plt.savefig(filename)
