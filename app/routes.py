@@ -18,3 +18,8 @@ def traceIP():
            print(ip_list)
            graph.set_Graph(ip_list)
        return render_template('graph.html',title='Graph')
+@app.route('/scan')
+def scan():
+    stream = trace.getIp_Network('192.168.43.0/24')
+    print (stream)
+    return "this is test"

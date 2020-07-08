@@ -5,5 +5,9 @@
   <h4>Enter IP</h4> <input type="text" name="ip">
   <button type="submit">Submit</button>
 </form>
+
+<form action="{{ url_for('scan') }}" >
+  <button type="submit">Scan</button>
+</form>
 {% endblock %}
 

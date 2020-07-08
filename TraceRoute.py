@@ -1,4 +1,5 @@
 import os
+import re
 class Traceroute:
     def __init__(self):
         self.__command = "traceroute "
@@ -15,3 +16,21 @@ class Traceroute:
          self.__ip_list.append(ip)
     def getIpList(self):
         return self.__ip_list
+    def getIp_Network(self,ip):
+     command = "nmap -sn "
+     command = command + ip
+     stream = os.popen(command)
+     #print (stream.read())
+     string = []
+     for line in stream:
+         if line[0] == 'N':
+           ip = re.findall(r'[0-9]+(?:\.[0-9]+){3}', line)
+           print (ip)
+           string.append(ip)
+     #result = stream.read()
+     print (string)
+     return string
+
+
+
+
